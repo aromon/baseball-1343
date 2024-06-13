@@ -46,4 +46,6 @@ class TestGame(TestCase):
     def test_return_solve_result_if_some_matched_number(self):
         self.generage_question("123")
         self.assert_matched_number(self.game.guess("120"),False,2,0)
+        self.assert_matched_number(self.game.guess("061"),False,0,1)
+        self.assert_matched_number(self.game.guess("136"),False,1,1)
 
