@@ -4,8 +4,11 @@ from game import Game
 
 
 class TestGame(TestCase):
-    def test_exception_when_input_is_none(self):
+
+    def setUp(self):
+        super().setUp()
         self.game = Game()
+    def test_exception_when_input_is_none(self):
         with self.assertRaises(TypeError):
             self.game.guess(None)
 
